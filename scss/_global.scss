@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Manrope", serif;
+}
+.container {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1260px) {
+  .container {
+    width: 1024px;
+  }
+}
+@media screen and (max-width: 1044px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (max-width: 788px) {
+  .container {
+    width: 640px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+}

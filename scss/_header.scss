@@ -1,0 +1,238 @@
+.header {
+  padding-bottom: 16px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: $white-color;
+  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &.top {
+      padding: 12px 0 20px 0;
+    }
+  }
+  &__bar,
+  &__x,
+  &__catalog-sm {
+    display: none;
+  }
+  &__nav,
+  &__contact {
+    display: flex;
+    gap: 28px;
+    a {
+      font-size: 14px;
+      color: $text-color;
+    }
+  }
+  &__catalog {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 30px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: $text-color;
+    color: $white-color;
+    i {
+      font-size: 32px;
+    }
+    span {
+      font-size: 16px;
+    }
+  }
+  &__search {
+    width: 450px;
+    height: 50px;
+    position: relative;
+    input {
+      height: 100%;
+      width: 100%;
+      border-radius: 40px;
+      padding: 0 24px;
+      font-size: 16px;
+      outline: none;
+      border: 1px solid $text-color;
+    }
+    i {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      z-index: 1;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: $text-color;
+      cursor: pointer;
+    }
+  }
+  &__details {
+    text-align: center;
+    color: $text-color;
+    &--item {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 4px;
+      i {
+        font-size: 28px;
+      }
+      .info {
+        position: absolute;
+        top: -2px;
+        right: -4px;
+        width: 16px;
+        height: 16px;
+        background-color: #c63c3c;
+        color: white;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .header {
+    &__logo {
+      img {
+        width: 150px;
+      }
+    }
+    &__catalog {
+      gap: 6px;
+      padding: 0 25px;
+      i {
+        font-size: 28px;
+      }
+    }
+    &__search {
+      width: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 1044px) {
+  .header {
+    padding-top: 16px;
+    .container {
+      justify-content: flex-start;
+      &.top {
+        width: 75%;
+        height: calc(100vh - 64px);
+        background-color: $white-color;
+        padding-top: 50px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        top: 64px;
+        left: -100%;
+        border-right: 1px solid rgba($color: #000000, $alpha: 0.2);
+        border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
+        transition: all 0.2s ease;
+        &.opened {
+          left: 0;
+        }
+      }
+    }
+    &__bar {
+      display: block;
+      font-size: 32px;
+      margin-right: 24px;
+      cursor: pointer;
+    }
+    &__x {
+      display: block;
+      font-size: 36px;
+      color: $text-color;
+      position: absolute;
+      right: 30px;
+      top: 25px;
+      cursor: pointer;
+    }
+    &__nav,
+    &__contact {
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+    &__catalog-sm {
+      width: 200px;
+      padding: 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: $white-color;
+      background-color: $text-color;
+      border-radius: 40px;
+      justify-content: center;
+      margin: 28px 0;
+      i {
+        font-size: 28px;
+      }
+    }
+    &__catalog {
+      display: none;
+    }
+    &__search {
+      display: none;
+    }
+    &__details {
+      &--item {
+        margin-bottom: 0;
+      }
+      &.one {
+        margin: 0 24px 0 auto;
+      }
+      &.two {
+        display: none;
+      }
+      p {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    .container {
+      justify-content: flex-start;
+      &.top {
+        width: 85%;
+        padding-top: 30px;
+      }
+    }
+    &__bar {
+      font-size: 30px;
+      margin-right: 18px;
+    }
+    &__x {
+      font-size: 32px;
+      right: 10px;
+      top: 10px;
+    }
+    &__catalog-sm {
+      width: 90%;
+      padding: 8px 0;
+      gap: 6px;
+      margin: 28px 0;
+      i {
+        font-size: 24px;
+      }
+    }
+    &__details {
+      &.one {
+        margin: 0 20px 0 auto;
+      }
+    }
+  }
+}
