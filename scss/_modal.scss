@@ -1,0 +1,58 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  &__content {
+    background-color: $white-color;
+    width: 800px;
+    padding: 86px 64px;
+    border-radius: 50px;
+    position: relative;
+    h3 {
+      font-size: 64px;
+      line-height: 110%;
+      margin-bottom: 50px;
+    }
+    i {
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      font-size: 36px;
+      color: $text-color;
+      cursor: pointer;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    &--input {
+      padding: 15px 20px;
+      border-radius: 50px;
+      border: 1px solid $text-color;
+      font-size: 16px;
+      &:focus {
+        border-color: $blue-color;
+        outline: 2px solid $blue-color;
+      }
+      &.btn {
+        background-color: $text-color;
+        color: $white-color;
+      }
+    }
+  }
+}

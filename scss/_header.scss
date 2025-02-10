@@ -71,6 +71,7 @@
   &__details {
     text-align: center;
     color: $text-color;
+    cursor: pointer;
     &--item {
       position: relative;
       display: inline-block;
